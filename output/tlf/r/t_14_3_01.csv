@@ -1,0 +1,75 @@
+ROW,LABEL,C1,C2
+1,Within 30 minutes after vaccination,,
+2,Any local reaction,4 (2.5%),1 (1.3%)
+3,Maximum grade 1,4 (2.5%),1 (1.3%)
+4,Maximum grade 2,0,0
+5,Maximum grade 3,0,0
+6,Maximum grade 4,0,0
+7,Any systemic reaction,0,0
+8,Maximum grade 1,0,0
+9,Maximum grade 2,0,0
+10,Maximum grade 3,0,0
+11,Maximum grade 4,0,0
+12,Pain,2 (1.3%),0
+13,Grade 2 or higher,0,0
+14,Tenderness,2 (1.3%),1 (1.3%)
+15,Grade 2 or higher,0,0
+16,Redness,0,0
+17,Grade 2 or higher,0,0
+18,Swelling,0,0
+19,Grade 2 or higher,0,0
+20,Induration,0,0
+21,Grade 2 or higher,0,0
+22,Fever,0,0
+23,Grade 2 or higher,0,0
+24,Chills,0,0
+25,Grade 2 or higher,0,0
+26,Malaise,0,0
+27,Grade 2 or higher,0,0
+28,Myalgia,0,0
+29,Grade 2 or higher,0,0
+30,Headache,0,0
+31,Grade 2 or higher,0,0
+32,Arthralgia,0,0
+33,Grade 2 or higher,0,0
+34,Nausea,0,0
+35,Grade 2 or higher,0,0
+36,Vomiting,0,0
+37,Grade 2 or higher,0,0
+38,Within 7 days after vaccination,,
+39,Any local reaction,146 (91.8%),26 (32.9%)
+40,Maximum grade 1,124 (78.0%),25 (31.6%)
+41,Maximum grade 2,22 (13.8%),1 (1.3%)
+42,Maximum grade 3,0,0
+43,Maximum grade 4,0,0
+44,Any systemic reaction,85 (53.5%),37 (46.8%)
+45,Maximum grade 1,64 (40.3%),28 (35.4%)
+46,Maximum grade 2,19 (11.9%),7 (8.9%)
+47,Maximum grade 3,2 (1.3%),2 (2.5%)
+48,Maximum grade 4,0,0
+49,Pain,107 (67.3%),9 (11.4%)
+50,Grade 2 or higher,13 (8.2%),0
+51,Tenderness,105 (66.0%),18 (22.8%)
+52,Grade 2 or higher,10 (6.3%),1 (1.3%)
+53,Redness,3 (1.9%),0
+54,Grade 2 or higher,0,0
+55,Swelling,3 (1.9%),0
+56,Grade 2 or higher,1 (0.6%),0
+57,Induration,5 (3.1%),0
+58,Grade 2 or higher,0,0
+59,Fever,3 (1.9%),0
+60,Grade 2 or higher,0,0
+61,Chills,9 (5.7%),6 (7.6%)
+62,Grade 2 or higher,2 (1.3%),2 (2.5%)
+63,Malaise,26 (16.4%),11 (13.9%)
+64,Grade 2 or higher,5 (3.1%),3 (3.8%)
+65,Myalgia,28 (17.6%),8 (10.1%)
+66,Grade 2 or higher,1 (0.6%),1 (1.3%)
+67,Headache,26 (16.4%),14 (17.7%)
+68,Grade 2 or higher,5 (3.1%),2 (2.5%)
+69,Arthralgia,21 (13.2%),9 (11.4%)
+70,Grade 2 or higher,9 (5.7%),1 (1.3%)
+71,Nausea,4 (2.5%),2 (2.5%)
+72,Grade 2 or higher,0,0
+73,Vomiting,5 (3.1%),0
+74,Grade 2 or higher,1 (0.6%),0

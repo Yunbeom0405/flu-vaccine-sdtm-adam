@@ -1,0 +1,36 @@
+Table 14-1.01 Summary of Populations, Disposition and Demographics
+
+—————————————————————————————————————————————————————————————————————————————————————————————————
+                                         VAXF-101 0.5 mL (N=160)   Placebo (N=80)   Total (N=240)
+—————————————————————————————————————————————————————————————————————————————————————————————————
+Randomized                                     160 (100%)            80 (100%)       240 (100%)  
+Dosed (safety population)                       159 (99%)             79 (99%)        238 (99%)  
+Immunogenicity per-protocol population          142 (89%)             70 (88%)        212 (88%)  
+Completed study                                 155 (97%)             77 (96%)        232 (97%)  
+Discontinued study                               5 (3%)                3 (4%)          8 (3%)    
+Lost to follow-up                                1 (1%)                1 (1%)          2 (1%)    
+Withdrawal by subject                            4 (3%)                2 (3%)          6 (3%)    
+Age (years)                                                                                      
+n                                                  160                   80              240     
+Mean (SD)                                     41.2 (12.97)          42.8 (11.98)    41.7 (12.65) 
+Median                                            43.5                  43.5            43.5     
+Min; Max                                         18; 60                20; 60          18; 60    
+Age group                                                                                        
+18-45                                           87 (54%)              43 (54%)        130 (54%)  
+46-60                                           73 (46%)              37 (46%)        110 (46%)  
+Sex                                                                                              
+Female                                          80 (50%)              36 (45%)        116 (48%)  
+Male                                            80 (50%)              44 (55%)        124 (52%)  
+Race                                                                                             
+Asian                                           64 (40%)              44 (55%)        108 (45%)  
+Black or African American                       29 (18%)              9 (11%)         38 (16%)   
+White                                           50 (31%)              22 (28%)        72 (30%)   
+Other                                           17 (11%)               5 (6%)          22 (9%)   
+Ethnicity                                                                                        
+Hispanic or Latino                              34 (21%)              11 (14%)        45 (19%)   
+Not Hispanic or Latino                          126 (79%)             69 (86%)        195 (81%)  
+—————————————————————————————————————————————————————————————————————————————————————————————————
+
+Population: randomized. Percentages use N in the column header; arms are as randomized.
+27 screen failures are not in this table. Synthetic data.
+Source: r/tlf/t_14_1_01.R

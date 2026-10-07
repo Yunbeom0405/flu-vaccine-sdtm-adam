@@ -1,0 +1,84 @@
+Table 14-3.01 Solicited Local and Systemic Reactions by Maximum Grade
+
+——————————————————————————————————————————————————————————————————————————————
+                                      VAXF-101 0.5 mL (N=159)   Placebo (N=79)
+——————————————————————————————————————————————————————————————————————————————
+Within 30 minutes after vaccination                                           
+Any local reaction                           4 (2.5%)              1 (1.3%)   
+Maximum grade 1                              4 (2.5%)              1 (1.3%)   
+Maximum grade 2                                  0                    0       
+Maximum grade 3                                  0                    0       
+Maximum grade 4                                  0                    0       
+Any systemic reaction                            0                    0       
+Maximum grade 1                                  0                    0       
+Maximum grade 2                                  0                    0       
+Maximum grade 3                                  0                    0       
+Maximum grade 4                                  0                    0       
+Pain                                         2 (1.3%)                 0       
+Grade 2 or higher                                0                    0       
+Tenderness                                   2 (1.3%)              1 (1.3%)   
+Grade 2 or higher                                0                    0       
+Redness                                          0                    0       
+Grade 2 or higher                                0                    0       
+Swelling                                         0                    0       
+Grade 2 or higher                                0                    0       
+Induration                                       0                    0       
+Grade 2 or higher                                0                    0       
+Fever                                            0                    0       
+Grade 2 or higher                                0                    0       
+Chills                                           0                    0       
+Grade 2 or higher                                0                    0       
+Malaise                                          0                    0       
+Grade 2 or higher                                0                    0       
+Myalgia                                          0                    0       
+Grade 2 or higher                                0                    0       
+Headache                                         0                    0       
+Grade 2 or higher                                0                    0       
+Arthralgia                                       0                    0       
+Grade 2 or higher                                0                    0       
+Nausea                                           0                    0       
+Grade 2 or higher                                0                    0       
+Vomiting                                         0                    0       
+Grade 2 or higher                                0                    0       
+Within 7 days after vaccination                                               
+Any local reaction                          146 (91.8%)           26 (32.9%)  
+Maximum grade 1                             124 (78.0%)           25 (31.6%)  
+Maximum grade 2                             22 (13.8%)             1 (1.3%)   
+Maximum grade 3                                  0                    0       
+Maximum grade 4                                  0                    0       
+Any systemic reaction                       85 (53.5%)            37 (46.8%)  
+Maximum grade 1                             64 (40.3%)            28 (35.4%)  
+Maximum grade 2                             19 (11.9%)             7 (8.9%)   
+Maximum grade 3                              2 (1.3%)              2 (2.5%)   
+Maximum grade 4                                  0                    0       
+Pain                                        107 (67.3%)           9 (11.4%)   
+Grade 2 or higher                            13 (8.2%)                0       
+Tenderness                                  105 (66.0%)           18 (22.8%)  
+Grade 2 or higher                            10 (6.3%)             1 (1.3%)   
+Redness                                      3 (1.9%)                 0       
+Grade 2 or higher                                0                    0       
+Swelling                                     3 (1.9%)                 0       
+Grade 2 or higher                            1 (0.6%)                 0       
+Induration                                   5 (3.1%)                 0       
+Grade 2 or higher                                0                    0       
+Fever                                        3 (1.9%)                 0       
+Grade 2 or higher                                0                    0       
+Chills                                       9 (5.7%)              6 (7.6%)   
+Grade 2 or higher                            2 (1.3%)              2 (2.5%)   
+Malaise                                     26 (16.4%)            11 (13.9%)  
+Grade 2 or higher                            5 (3.1%)              3 (3.8%)   
+Myalgia                                     28 (17.6%)            8 (10.1%)   
+Grade 2 or higher                            1 (0.6%)              1 (1.3%)   
+Headache                                    26 (16.4%)            14 (17.7%)  
+Grade 2 or higher                            5 (3.1%)              2 (2.5%)   
+Arthralgia                                  21 (13.2%)            9 (11.4%)   
+Grade 2 or higher                            9 (5.7%)              1 (1.3%)   
+Nausea                                       4 (2.5%)              2 (2.5%)   
+Grade 2 or higher                                0                    0       
+Vomiting                                     5 (3.1%)                 0       
+Grade 2 or higher                            1 (0.6%)                 0       
+——————————————————————————————————————————————————————————————————————————————
+
+Population: safety (randomized and dosed), arms as treated. Subjects counted once per reaction at the maximum grade.
+FDA 2007 toxicity grading scale for preventive vaccine trials. Diameters under 25 mm are not reactions.
+Source: r/tlf/t_14_3_01.R

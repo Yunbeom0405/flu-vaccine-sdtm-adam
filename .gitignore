@@ -1,0 +1,11 @@
+README.md.bak
+*.bak
+*.log
+*.lst
+.DS_Store
+.RData
+.Rproj.user/
+Thumbs.db
+__pycache__/
+data/
+specs/*.xlsx
