@@ -34,7 +34,7 @@ ADaM notes:
 | SDTM SAS vs R | 15 datasets, all match |
 | ADaM SAS vs R | 5 datasets, all match |
 | TLF SAS vs R | 4 tables, all match |
-| Pinnacle 21 SDTM (with define.xml) | 0 errors, 0 rejects, 46 warning types |
+| Pinnacle 21 SDTM (with define.xml) | 0 errors, 0 rejects, 45 warning types |
 | Pinnacle 21 ADaM (with define.xml) | 0 errors, 1 warning type (ADAE) + not-validated notes for SDTM-only datasets |
 
 - QC findings: [docs/QC-LOG.md](docs/QC-LOG.md)
