@@ -21,6 +21,8 @@ Each finding was fixed and the affected datasets compared again. None reached a 
 | AE variable order differed from the spec (AECAT before AEBODSYS) | SAS and R |
 | Dropout date of one subject group fell after the last visit | Raw data generator |
 
+After the first P21 run (SD0057 expected variables missing, SD1079 visit order) the spec and the SAS and R programs for DM, AE, IS and FACE were changed: DM death and ACTARMUD variables, AE MedDRA hierarchy variables (empty), IS reference range variables and ISNRIND, FACE VISITNUM and VISIT. The four datasets were compared again, all 15 match.
+
 ### ADaM
 
 | Finding | Cause |

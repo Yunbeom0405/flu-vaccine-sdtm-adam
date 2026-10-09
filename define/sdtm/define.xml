@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../define2-1-0.xsl"?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns:xlink="http://www.w3.org/1999/xlink" ODMVersion="1.3.2" FileType="Snapshot" FileOID="define.sdtm" CreationDateTime="2026-10-03T22:01:17" Originator="P3 portfolio" SourceSystem="make_define.py" SourceSystemVersion="1.0">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns:xlink="http://www.w3.org/1999/xlink" ODMVersion="1.3.2" FileType="Snapshot" FileOID="define.SDTM" CreationDateTime="2026-10-08T21:41:42" Originator="P3 portfolio" SourceSystem="make_define.py" SourceSystemVersion="1.0">
   <Study OID="VAXF101">
     <GlobalVariables>
       <StudyName>VAXF101</StudyName>
@@ -116,331 +116,351 @@
           <CheckValue>PROTOCOL MILESTONE</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <ItemGroupDef OID="IG.DM" Name="DM" Repeating="No" IsReferenceData="No" SASDatasetName="DM" Purpose="Tabulation" def:Structure="One record per subject" def:ArchiveLocationID="LF.DM" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.DM" Name="DM" Repeating="No" SASDatasetName="DM" Purpose="Tabulation" def:Structure="One record per subject" def:ArchiveLocationID="LF.DM" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Demographics</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.DM.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.DM.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.DM.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.DM.SUBJID" OrderNumber="4" Mandatory="Yes" Role="Topic" />
-        <ItemRef ItemOID="IT.DM.RFSTDTC" OrderNumber="5" Mandatory="No" MethodOID="MT.RFDOSE" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.RFENDTC" OrderNumber="6" Mandatory="No" MethodOID="MT.RFEND" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.RFXSTDTC" OrderNumber="7" Mandatory="No" MethodOID="MT.RFDOSE" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.RFXENDTC" OrderNumber="8" Mandatory="No" MethodOID="MT.RFDOSE" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.RFICDTC" OrderNumber="9" Mandatory="No" MethodOID="MT.ISODT" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.RFPENDTC" OrderNumber="10" Mandatory="No" MethodOID="MT.RFEND" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.SITEID" OrderNumber="11" Mandatory="Yes" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.BRTHDTC" OrderNumber="12" Mandatory="No" MethodOID="MT.ISODT" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.AGE" OrderNumber="13" Mandatory="No" MethodOID="MT.AGE" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.AGEU" OrderNumber="14" Mandatory="No" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.DM.SEX" OrderNumber="15" Mandatory="Yes" MethodOID="MT.UPPER" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.RACE" OrderNumber="16" Mandatory="No" MethodOID="MT.UPPER" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.ETHNIC" OrderNumber="17" Mandatory="No" MethodOID="MT.UPPER" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.ARMCD" OrderNumber="18" Mandatory="No" MethodOID="MT.ARM" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.ARM" OrderNumber="19" Mandatory="No" MethodOID="MT.ARM" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.DM.ACTARMCD" OrderNumber="20" Mandatory="No" MethodOID="MT.ARM" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.ACTARM" OrderNumber="21" Mandatory="No" MethodOID="MT.ARM" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.DM.ARMNRS" OrderNumber="22" Mandatory="No" MethodOID="MT.ARM" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.COUNTRY" OrderNumber="23" Mandatory="Yes" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.DM.DMDTC" OrderNumber="24" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.DM.DMDY" OrderNumber="25" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
+        <ItemRef ItemOID="IT.DM.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.DM.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.DM.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.DM.SUBJID" OrderNumber="4" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.DM.RFSTDTC" OrderNumber="5" Mandatory="No" MethodOID="MT.RFDOSE" />
+        <ItemRef ItemOID="IT.DM.RFENDTC" OrderNumber="6" Mandatory="No" MethodOID="MT.RFEND" />
+        <ItemRef ItemOID="IT.DM.RFXSTDTC" OrderNumber="7" Mandatory="No" MethodOID="MT.RFDOSE" />
+        <ItemRef ItemOID="IT.DM.RFXENDTC" OrderNumber="8" Mandatory="No" MethodOID="MT.RFDOSE" />
+        <ItemRef ItemOID="IT.DM.RFICDTC" OrderNumber="9" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.DM.RFPENDTC" OrderNumber="10" Mandatory="No" MethodOID="MT.RFEND" />
+        <ItemRef ItemOID="IT.DM.DTHDTC" OrderNumber="11" Mandatory="No" />
+        <ItemRef ItemOID="IT.DM.DTHFL" OrderNumber="12" Mandatory="No" />
+        <ItemRef ItemOID="IT.DM.SITEID" OrderNumber="13" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.DM.BRTHDTC" OrderNumber="14" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.DM.AGE" OrderNumber="15" Mandatory="No" MethodOID="MT.AGE" />
+        <ItemRef ItemOID="IT.DM.AGEU" OrderNumber="16" Mandatory="No" />
+        <ItemRef ItemOID="IT.DM.SEX" OrderNumber="17" Mandatory="Yes" MethodOID="MT.UPPER" />
+        <ItemRef ItemOID="IT.DM.RACE" OrderNumber="18" Mandatory="No" MethodOID="MT.UPPER" />
+        <ItemRef ItemOID="IT.DM.ETHNIC" OrderNumber="19" Mandatory="No" MethodOID="MT.UPPER" />
+        <ItemRef ItemOID="IT.DM.ARMCD" OrderNumber="20" Mandatory="No" MethodOID="MT.ARM" />
+        <ItemRef ItemOID="IT.DM.ARM" OrderNumber="21" Mandatory="No" MethodOID="MT.ARM" />
+        <ItemRef ItemOID="IT.DM.ACTARMCD" OrderNumber="22" Mandatory="No" MethodOID="MT.ARM" />
+        <ItemRef ItemOID="IT.DM.ACTARM" OrderNumber="23" Mandatory="No" MethodOID="MT.ARM" />
+        <ItemRef ItemOID="IT.DM.ARMNRS" OrderNumber="24" Mandatory="No" MethodOID="MT.ARM" />
+        <ItemRef ItemOID="IT.DM.ACTARMUD" OrderNumber="25" Mandatory="No" />
+        <ItemRef ItemOID="IT.DM.COUNTRY" OrderNumber="26" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.DM.DMDTC" OrderNumber="27" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.DM.DMDY" OrderNumber="28" Mandatory="No" MethodOID="MT.DY" />
         <def:Class Name="SPECIAL PURPOSE" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.DS" Name="DS" Repeating="Yes" IsReferenceData="No" SASDatasetName="DS" Purpose="Tabulation" def:Structure="One record per disposition status or protocol milestone per subject" def:ArchiveLocationID="LF.DS" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.DS" Name="DS" Repeating="Yes" SASDatasetName="DS" Purpose="Tabulation" def:Structure="One record per disposition status or protocol milestone per subject" def:ArchiveLocationID="LF.DS" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Disposition</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.DS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.DS.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.DS.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.DS.DSSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQDS" Role="Identifier" />
-        <ItemRef ItemOID="IT.DS.DSREFID" OrderNumber="5" Mandatory="No" Role="Identifier" />
-        <ItemRef ItemOID="IT.DS.DSTERM" OrderNumber="6" Mandatory="Yes" Role="Topic" />
-        <ItemRef ItemOID="IT.DS.DSDECOD" OrderNumber="7" Mandatory="Yes" KeySequence="3" MethodOID="MT.DSDECOD" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.DS.DSCAT" OrderNumber="8" Mandatory="No" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.DS.EPOCH" OrderNumber="9" Mandatory="No" MethodOID="MT.EPOCH" Role="Timing" />
-        <ItemRef ItemOID="IT.DS.DSSTDTC" OrderNumber="10" Mandatory="No" KeySequence="4" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.DS.DSSTDY" OrderNumber="11" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
+        <ItemRef ItemOID="IT.DS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.DS.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.DS.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.DS.DSSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQDS" />
+        <ItemRef ItemOID="IT.DS.DSREFID" OrderNumber="5" Mandatory="No" />
+        <ItemRef ItemOID="IT.DS.DSTERM" OrderNumber="6" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.DS.DSDECOD" OrderNumber="7" Mandatory="Yes" KeySequence="3" MethodOID="MT.DSDECOD" />
+        <ItemRef ItemOID="IT.DS.DSCAT" OrderNumber="8" Mandatory="No" />
+        <ItemRef ItemOID="IT.DS.EPOCH" OrderNumber="9" Mandatory="No" MethodOID="MT.EPOCH" />
+        <ItemRef ItemOID="IT.DS.DSSTDTC" OrderNumber="10" Mandatory="No" KeySequence="4" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.DS.DSSTDY" OrderNumber="11" Mandatory="No" MethodOID="MT.DY" />
         <def:Class Name="EVENTS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.EX" Name="EX" Repeating="Yes" IsReferenceData="No" SASDatasetName="EX" Purpose="Tabulation" def:Structure="One record per constant dosing interval per subject" def:ArchiveLocationID="LF.EX" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.EX" Name="EX" Repeating="Yes" SASDatasetName="EX" Purpose="Tabulation" def:Structure="One record per constant dosing interval per subject" def:ArchiveLocationID="LF.EX" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Exposure</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.EX.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.EX.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.EX.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.EX.EXSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" Role="Identifier" />
-        <ItemRef ItemOID="IT.EX.EXTRT" OrderNumber="5" Mandatory="Yes" KeySequence="3" MethodOID="MT.EXTRT" Role="Topic" />
-        <ItemRef ItemOID="IT.EX.EXCAT" OrderNumber="6" Mandatory="No" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXDOSE" OrderNumber="7" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXDOSU" OrderNumber="8" Mandatory="No" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXDOSFRM" OrderNumber="9" Mandatory="No" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXDOSFRQ" OrderNumber="10" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXROUTE" OrderNumber="11" Mandatory="No" MethodOID="MT.UPPER" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXLOT" OrderNumber="12" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXLOC" OrderNumber="13" Mandatory="No" MethodOID="MT.EXLOC" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.EX.EXLAT" OrderNumber="14" Mandatory="No" MethodOID="MT.UPPER" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.EX.EPOCH" OrderNumber="15" Mandatory="No" MethodOID="MT.EPOCH" Role="Timing" />
-        <ItemRef ItemOID="IT.EX.EXSTDTC" OrderNumber="16" Mandatory="No" KeySequence="4" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.EX.EXENDTC" OrderNumber="17" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.EX.EXSTDY" OrderNumber="18" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.EX.EXENDY" OrderNumber="19" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
+        <ItemRef ItemOID="IT.EX.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.EX.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.EX.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.EX.EXSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" />
+        <ItemRef ItemOID="IT.EX.EXTRT" OrderNumber="5" Mandatory="Yes" KeySequence="3" MethodOID="MT.EXTRT" />
+        <ItemRef ItemOID="IT.EX.EXCAT" OrderNumber="6" Mandatory="No" />
+        <ItemRef ItemOID="IT.EX.EXDOSE" OrderNumber="7" Mandatory="No" />
+        <ItemRef ItemOID="IT.EX.EXDOSU" OrderNumber="8" Mandatory="No" />
+        <ItemRef ItemOID="IT.EX.EXDOSFRM" OrderNumber="9" Mandatory="No" />
+        <ItemRef ItemOID="IT.EX.EXDOSFRQ" OrderNumber="10" Mandatory="No" />
+        <ItemRef ItemOID="IT.EX.EXROUTE" OrderNumber="11" Mandatory="No" MethodOID="MT.UPPER" />
+        <ItemRef ItemOID="IT.EX.EXLOT" OrderNumber="12" Mandatory="No" />
+        <ItemRef ItemOID="IT.EX.EXLOC" OrderNumber="13" Mandatory="No" MethodOID="MT.EXLOC" />
+        <ItemRef ItemOID="IT.EX.EXLAT" OrderNumber="14" Mandatory="No" MethodOID="MT.UPPER" />
+        <ItemRef ItemOID="IT.EX.EPOCH" OrderNumber="15" Mandatory="No" MethodOID="MT.EPOCH" />
+        <ItemRef ItemOID="IT.EX.EXSTDTC" OrderNumber="16" Mandatory="No" KeySequence="4" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.EX.EXENDTC" OrderNumber="17" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.EX.EXSTDY" OrderNumber="18" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.EX.EXENDY" OrderNumber="19" Mandatory="No" MethodOID="MT.DY" />
         <def:Class Name="INTERVENTIONS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.SV" Name="SV" Repeating="Yes" IsReferenceData="No" SASDatasetName="SV" Purpose="Tabulation" def:Structure="One record per actual visit per subject" def:ArchiveLocationID="LF.SV" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.SV" Name="SV" Repeating="Yes" SASDatasetName="SV" Purpose="Tabulation" def:Structure="One record per actual visit per subject" def:ArchiveLocationID="LF.SV" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Subject Visits</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.SV.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.SV.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.SV.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.SV.VISITNUM" OrderNumber="4" Mandatory="Yes" KeySequence="3" MethodOID="MT.VISIT" Role="Topic" />
-        <ItemRef ItemOID="IT.SV.VISIT" OrderNumber="5" Mandatory="No" MethodOID="MT.VISIT" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.SV.SVPRESP" OrderNumber="6" Mandatory="No" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.SV.SVOCCUR" OrderNumber="7" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.SV.VISITDY" OrderNumber="8" Mandatory="No" MethodOID="MT.VISIT" Role="Timing" />
-        <ItemRef ItemOID="IT.SV.SVSTDTC" OrderNumber="9" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.SV.SVENDTC" OrderNumber="10" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.SV.SVSTDY" OrderNumber="11" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.SV.SVENDY" OrderNumber="12" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
+        <ItemRef ItemOID="IT.SV.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.SV.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.SV.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.SV.VISITNUM" OrderNumber="4" Mandatory="Yes" KeySequence="3" MethodOID="MT.VISIT" />
+        <ItemRef ItemOID="IT.SV.VISIT" OrderNumber="5" Mandatory="No" MethodOID="MT.VISIT" />
+        <ItemRef ItemOID="IT.SV.SVPRESP" OrderNumber="6" Mandatory="No" />
+        <ItemRef ItemOID="IT.SV.SVOCCUR" OrderNumber="7" Mandatory="No" />
+        <ItemRef ItemOID="IT.SV.VISITDY" OrderNumber="8" Mandatory="No" MethodOID="MT.VISIT" />
+        <ItemRef ItemOID="IT.SV.SVSTDTC" OrderNumber="9" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.SV.SVENDTC" OrderNumber="10" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.SV.SVSTDY" OrderNumber="11" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.SV.SVENDY" OrderNumber="12" Mandatory="No" MethodOID="MT.DY" />
         <def:Class Name="SPECIAL PURPOSE" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.IE" Name="IE" Repeating="Yes" IsReferenceData="No" SASDatasetName="IE" Purpose="Tabulation" def:Structure="One record per inclusion/exclusion criterion not met per subject" def:ArchiveLocationID="LF.IE" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.IE" Name="IE" Repeating="Yes" SASDatasetName="IE" Purpose="Tabulation" def:Structure="One record per inclusion/exclusion criterion not met per subject" def:ArchiveLocationID="LF.IE" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Inclusion/Exclusion Criterion Not Met</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.IE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.IE.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.IE.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.IE.IESEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" Role="Identifier" />
-        <ItemRef ItemOID="IT.IE.IETESTCD" OrderNumber="5" Mandatory="Yes" KeySequence="3" MethodOID="MT.IECRIT" Role="Topic" />
-        <ItemRef ItemOID="IT.IE.IETEST" OrderNumber="6" Mandatory="Yes" MethodOID="MT.IECRIT" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.IE.IECAT" OrderNumber="7" Mandatory="Yes" MethodOID="MT.IECRIT" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.IE.IEORRES" OrderNumber="8" Mandatory="Yes" MethodOID="MT.IECRIT" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.IE.IESTRESC" OrderNumber="9" Mandatory="Yes" MethodOID="MT.IECRIT" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.IE.VISITNUM" OrderNumber="10" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.IE.VISIT" OrderNumber="11" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.IE.EPOCH" OrderNumber="12" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.IE.IEDTC" OrderNumber="13" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.IE.IEDY" OrderNumber="14" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
+        <ItemRef ItemOID="IT.IE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.IE.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.IE.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.IE.IESEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" />
+        <ItemRef ItemOID="IT.IE.IETESTCD" OrderNumber="5" Mandatory="Yes" KeySequence="3" MethodOID="MT.IECRIT" />
+        <ItemRef ItemOID="IT.IE.IETEST" OrderNumber="6" Mandatory="Yes" MethodOID="MT.IECRIT" />
+        <ItemRef ItemOID="IT.IE.IECAT" OrderNumber="7" Mandatory="Yes" MethodOID="MT.IECRIT" />
+        <ItemRef ItemOID="IT.IE.IEORRES" OrderNumber="8" Mandatory="Yes" MethodOID="MT.IECRIT" />
+        <ItemRef ItemOID="IT.IE.IESTRESC" OrderNumber="9" Mandatory="Yes" MethodOID="MT.IECRIT" />
+        <ItemRef ItemOID="IT.IE.VISITNUM" OrderNumber="10" Mandatory="No" />
+        <ItemRef ItemOID="IT.IE.VISIT" OrderNumber="11" Mandatory="No" />
+        <ItemRef ItemOID="IT.IE.EPOCH" OrderNumber="12" Mandatory="No" />
+        <ItemRef ItemOID="IT.IE.IEDTC" OrderNumber="13" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.IE.IEDY" OrderNumber="14" Mandatory="No" MethodOID="MT.DY" />
         <def:Class Name="FINDINGS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.VS" Name="VS" Repeating="Yes" IsReferenceData="No" SASDatasetName="VS" Purpose="Tabulation" def:Structure="One record per vital sign measurement per time point per visit per subject" def:ArchiveLocationID="LF.VS" def:CommentOID="COM.TEMP" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.VS" Name="VS" Repeating="Yes" SASDatasetName="VS" Purpose="Tabulation" def:Structure="One record per vital sign measurement per time point per visit per subject" def:ArchiveLocationID="LF.VS" def:CommentOID="COM.TEMP" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Vital Signs</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.VS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.VS.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.VS.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.VS.VSSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" Role="Identifier" />
-        <ItemRef ItemOID="IT.VS.VSTESTCD" OrderNumber="5" Mandatory="Yes" KeySequence="3" MethodOID="MT.VSTEST" Role="Topic" />
-        <ItemRef ItemOID="IT.VS.VSTEST" OrderNumber="6" Mandatory="Yes" MethodOID="MT.VSTEST" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSCAT" OrderNumber="7" Mandatory="No" MethodOID="MT.VSCAT" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSSCAT" OrderNumber="8" Mandatory="No" MethodOID="MT.VSCAT" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSORRES" OrderNumber="9" Mandatory="No" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSORRESU" OrderNumber="10" Mandatory="No" MethodOID="MT.VSUNIT" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSSTRESC" OrderNumber="11" Mandatory="No" MethodOID="MT.TEMPC" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSSTRESN" OrderNumber="12" Mandatory="No" MethodOID="MT.TEMPC" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSSTRESU" OrderNumber="13" Mandatory="No" MethodOID="MT.TEMPC" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.VS.VSLOBXFL" OrderNumber="14" Mandatory="No" MethodOID="MT.LOBXFL" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.VS.VISITNUM" OrderNumber="15" Mandatory="No" KeySequence="4" MethodOID="MT.VISIT" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.VISIT" OrderNumber="16" Mandatory="No" MethodOID="MT.VISIT" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.EPOCH" OrderNumber="17" Mandatory="No" MethodOID="MT.EPOCH" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.VSDTC" OrderNumber="18" Mandatory="No" KeySequence="5" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.VSDY" OrderNumber="19" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.VSTPT" OrderNumber="20" Mandatory="No" MethodOID="MT.DIARYTPT" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.VSTPTNUM" OrderNumber="21" Mandatory="No" KeySequence="6" MethodOID="MT.DIARYTPT" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.VSTPTREF" OrderNumber="22" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.VS.VSRFTDTC" OrderNumber="23" Mandatory="No" MethodOID="MT.RFDOSE" Role="Timing" />
+        <ItemRef ItemOID="IT.VS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.VS.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.VS.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.VS.VSSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" />
+        <ItemRef ItemOID="IT.VS.VSTESTCD" OrderNumber="5" Mandatory="Yes" KeySequence="3" MethodOID="MT.VSTEST" />
+        <ItemRef ItemOID="IT.VS.VSTEST" OrderNumber="6" Mandatory="Yes" MethodOID="MT.VSTEST" />
+        <ItemRef ItemOID="IT.VS.VSCAT" OrderNumber="7" Mandatory="No" MethodOID="MT.VSCAT" />
+        <ItemRef ItemOID="IT.VS.VSSCAT" OrderNumber="8" Mandatory="No" MethodOID="MT.VSCAT" />
+        <ItemRef ItemOID="IT.VS.VSORRES" OrderNumber="9" Mandatory="No" />
+        <ItemRef ItemOID="IT.VS.VSORRESU" OrderNumber="10" Mandatory="No" MethodOID="MT.VSUNIT" />
+        <ItemRef ItemOID="IT.VS.VSSTRESC" OrderNumber="11" Mandatory="No" MethodOID="MT.TEMPC" />
+        <ItemRef ItemOID="IT.VS.VSSTRESN" OrderNumber="12" Mandatory="No" MethodOID="MT.TEMPC" />
+        <ItemRef ItemOID="IT.VS.VSSTRESU" OrderNumber="13" Mandatory="No" MethodOID="MT.TEMPC" />
+        <ItemRef ItemOID="IT.VS.VSLOBXFL" OrderNumber="14" Mandatory="No" MethodOID="MT.LOBXFL" />
+        <ItemRef ItemOID="IT.VS.VISITNUM" OrderNumber="15" Mandatory="No" KeySequence="4" MethodOID="MT.VISIT" />
+        <ItemRef ItemOID="IT.VS.VISIT" OrderNumber="16" Mandatory="No" MethodOID="MT.VISIT" />
+        <ItemRef ItemOID="IT.VS.EPOCH" OrderNumber="17" Mandatory="No" MethodOID="MT.EPOCH" />
+        <ItemRef ItemOID="IT.VS.VSDTC" OrderNumber="18" Mandatory="No" KeySequence="5" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.VS.VSDY" OrderNumber="19" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.VS.VSTPT" OrderNumber="20" Mandatory="No" MethodOID="MT.DIARYTPT" />
+        <ItemRef ItemOID="IT.VS.VSTPTNUM" OrderNumber="21" Mandatory="No" KeySequence="6" MethodOID="MT.DIARYTPT" />
+        <ItemRef ItemOID="IT.VS.VSTPTREF" OrderNumber="22" Mandatory="No" />
+        <ItemRef ItemOID="IT.VS.VSRFTDTC" OrderNumber="23" Mandatory="No" MethodOID="MT.RFDOSE" />
         <def:Class Name="FINDINGS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.CE" Name="CE" Repeating="Yes" IsReferenceData="No" SASDatasetName="CE" Purpose="Tabulation" def:Structure="One record per solicited reaction per time point per subject" def:ArchiveLocationID="LF.CE" def:CommentOID="COM.FLAT" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.CE" Name="CE" Repeating="Yes" SASDatasetName="CE" Purpose="Tabulation" def:Structure="One record per solicited reaction per time point per subject" def:ArchiveLocationID="LF.CE" def:CommentOID="COM.FLAT" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Clinical Events</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.CE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.CE.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.CE.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.CE.CESEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" Role="Identifier" />
-        <ItemRef ItemOID="IT.CE.CEGRPID" OrderNumber="5" Mandatory="No" MethodOID="MT.REACT" Role="Identifier" />
-        <ItemRef ItemOID="IT.CE.CETERM" OrderNumber="6" Mandatory="Yes" MethodOID="MT.REACT" Role="Topic" />
-        <ItemRef ItemOID="IT.CE.CEDECOD" OrderNumber="7" Mandatory="No" KeySequence="3" MethodOID="MT.REACT" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.CE.CECAT" OrderNumber="8" Mandatory="No" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.CE.CESCAT" OrderNumber="9" Mandatory="No" MethodOID="MT.REACT" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.CE.CEPRESP" OrderNumber="10" Mandatory="No" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.CE.CEOCCUR" OrderNumber="11" Mandatory="No" MethodOID="MT.CEOCCUR" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.CE.CESEV" OrderNumber="12" Mandatory="No" MethodOID="MT.CEOCCUR" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.CE.CETOXGR" OrderNumber="13" Mandatory="No" MethodOID="MT.CEOCCUR" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.CE.EPOCH" OrderNumber="14" Mandatory="No" MethodOID="MT.EPOCH" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CESTDTC" OrderNumber="15" Mandatory="No" MethodOID="MT.CEOCCUR" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CEENDTC" OrderNumber="16" Mandatory="No" MethodOID="MT.CEOCCUR" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CESTDY" OrderNumber="17" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CEENDY" OrderNumber="18" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CETPT" OrderNumber="19" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CETPTNUM" OrderNumber="20" Mandatory="No" KeySequence="4" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CETPTREF" OrderNumber="21" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CERFTDTC" OrderNumber="22" Mandatory="No" MethodOID="MT.RFDOSE" Role="Timing" />
-        <ItemRef ItemOID="IT.CE.CEEVINTX" OrderNumber="23" Mandatory="No" Role="Timing" />
+        <ItemRef ItemOID="IT.CE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.CE.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.CE.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.CE.CESEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" />
+        <ItemRef ItemOID="IT.CE.CEGRPID" OrderNumber="5" Mandatory="No" MethodOID="MT.REACT" />
+        <ItemRef ItemOID="IT.CE.CETERM" OrderNumber="6" Mandatory="Yes" MethodOID="MT.REACT" />
+        <ItemRef ItemOID="IT.CE.CEDECOD" OrderNumber="7" Mandatory="No" KeySequence="3" MethodOID="MT.REACT" />
+        <ItemRef ItemOID="IT.CE.CECAT" OrderNumber="8" Mandatory="No" />
+        <ItemRef ItemOID="IT.CE.CESCAT" OrderNumber="9" Mandatory="No" MethodOID="MT.REACT" />
+        <ItemRef ItemOID="IT.CE.CEPRESP" OrderNumber="10" Mandatory="No" />
+        <ItemRef ItemOID="IT.CE.CEOCCUR" OrderNumber="11" Mandatory="No" MethodOID="MT.CEOCCUR" />
+        <ItemRef ItemOID="IT.CE.CESEV" OrderNumber="12" Mandatory="No" MethodOID="MT.CEOCCUR" />
+        <ItemRef ItemOID="IT.CE.CETOXGR" OrderNumber="13" Mandatory="No" MethodOID="MT.CEOCCUR" />
+        <ItemRef ItemOID="IT.CE.EPOCH" OrderNumber="14" Mandatory="No" MethodOID="MT.EPOCH" />
+        <ItemRef ItemOID="IT.CE.CESTDTC" OrderNumber="15" Mandatory="No" MethodOID="MT.CEOCCUR" />
+        <ItemRef ItemOID="IT.CE.CEENDTC" OrderNumber="16" Mandatory="No" MethodOID="MT.CEOCCUR" />
+        <ItemRef ItemOID="IT.CE.CESTDY" OrderNumber="17" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.CE.CEENDY" OrderNumber="18" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.CE.CETPT" OrderNumber="19" Mandatory="No" />
+        <ItemRef ItemOID="IT.CE.CETPTNUM" OrderNumber="20" Mandatory="No" KeySequence="4" />
+        <ItemRef ItemOID="IT.CE.CETPTREF" OrderNumber="21" Mandatory="No" />
+        <ItemRef ItemOID="IT.CE.CERFTDTC" OrderNumber="22" Mandatory="No" MethodOID="MT.RFDOSE" />
+        <ItemRef ItemOID="IT.CE.CEEVINTX" OrderNumber="23" Mandatory="No" />
         <def:Class Name="EVENTS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.FA" Name="FACE" Repeating="Yes" IsReferenceData="No" SASDatasetName="FACE" Purpose="Tabulation" def:Structure="One record per finding per object per time point per visit per subject" def:ArchiveLocationID="LF.FA" def:CommentOID="COM.FLAT" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.FA" Name="FACE" Repeating="Yes" SASDatasetName="FACE" Purpose="Tabulation" def:Structure="One record per finding per object per time point per visit per subject" def:ArchiveLocationID="LF.FA" def:CommentOID="COM.FLAT" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Findings About Events or Interventions</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.FA.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.FA.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.FA.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.FA.FASEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" Role="Identifier" />
-        <ItemRef ItemOID="IT.FA.FAGRPID" OrderNumber="5" Mandatory="No" MethodOID="MT.REACT" Role="Identifier" />
-        <ItemRef ItemOID="IT.FA.FATESTCD" OrderNumber="6" Mandatory="Yes" KeySequence="4" MethodOID="MT.FATEST" Role="Topic" />
-        <ItemRef ItemOID="IT.FA.FATEST" OrderNumber="7" Mandatory="Yes" MethodOID="MT.FATEST" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.FA.FAOBJ" OrderNumber="8" Mandatory="Yes" KeySequence="3" MethodOID="MT.REACT" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.FA.FACAT" OrderNumber="9" Mandatory="No" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.FA.FASCAT" OrderNumber="10" Mandatory="No" MethodOID="MT.REACT" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.FA.FAORRES" OrderNumber="11" Mandatory="No" MethodOID="MT.FAORRES" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.FA.FAORRESU" OrderNumber="12" Mandatory="No" MethodOID="MT.FAORRES" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.FA.FASTRESC" OrderNumber="13" Mandatory="No" MethodOID="MT.FAORRES" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.FA.FASTRESN" OrderNumber="14" Mandatory="No" MethodOID="MT.FAORRES" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.FA.FASTRESU" OrderNumber="15" Mandatory="No" MethodOID="MT.FAORRES" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.FA.FAEVAL" OrderNumber="16" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.FA.EPOCH" OrderNumber="17" Mandatory="No" MethodOID="MT.EPOCH" Role="Timing" />
-        <ItemRef ItemOID="IT.FA.FADTC" OrderNumber="18" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.FA.FADY" OrderNumber="19" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.FA.FATPT" OrderNumber="20" Mandatory="No" MethodOID="MT.DIARYTPT" Role="Timing" />
-        <ItemRef ItemOID="IT.FA.FATPTNUM" OrderNumber="21" Mandatory="No" KeySequence="5" MethodOID="MT.DIARYTPT" Role="Timing" />
-        <ItemRef ItemOID="IT.FA.FATPTREF" OrderNumber="22" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.FA.FARFTDTC" OrderNumber="23" Mandatory="No" MethodOID="MT.RFDOSE" Role="Timing" />
+        <ItemRef ItemOID="IT.FA.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.FA.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.FA.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.FA.FASEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" />
+        <ItemRef ItemOID="IT.FA.FAGRPID" OrderNumber="5" Mandatory="No" MethodOID="MT.REACT" />
+        <ItemRef ItemOID="IT.FA.FATESTCD" OrderNumber="6" Mandatory="Yes" KeySequence="4" MethodOID="MT.FATEST" />
+        <ItemRef ItemOID="IT.FA.FATEST" OrderNumber="7" Mandatory="Yes" MethodOID="MT.FATEST" />
+        <ItemRef ItemOID="IT.FA.FAOBJ" OrderNumber="8" Mandatory="Yes" KeySequence="3" MethodOID="MT.REACT" />
+        <ItemRef ItemOID="IT.FA.FACAT" OrderNumber="9" Mandatory="No" />
+        <ItemRef ItemOID="IT.FA.FASCAT" OrderNumber="10" Mandatory="No" MethodOID="MT.REACT" />
+        <ItemRef ItemOID="IT.FA.FAORRES" OrderNumber="11" Mandatory="No" MethodOID="MT.FAORRES" />
+        <ItemRef ItemOID="IT.FA.FAORRESU" OrderNumber="12" Mandatory="No" MethodOID="MT.FAORRES" />
+        <ItemRef ItemOID="IT.FA.FASTRESC" OrderNumber="13" Mandatory="No" MethodOID="MT.FAORRES" />
+        <ItemRef ItemOID="IT.FA.FASTRESN" OrderNumber="14" Mandatory="No" MethodOID="MT.FAORRES" />
+        <ItemRef ItemOID="IT.FA.FASTRESU" OrderNumber="15" Mandatory="No" MethodOID="MT.FAORRES" />
+        <ItemRef ItemOID="IT.FA.FAEVAL" OrderNumber="16" Mandatory="No" />
+        <ItemRef ItemOID="IT.FA.VISITNUM" OrderNumber="17" Mandatory="No" MethodOID="MT.FAVISIT" />
+        <ItemRef ItemOID="IT.FA.VISIT" OrderNumber="18" Mandatory="No" MethodOID="MT.FAVISIT" />
+        <ItemRef ItemOID="IT.FA.EPOCH" OrderNumber="19" Mandatory="No" MethodOID="MT.EPOCH" />
+        <ItemRef ItemOID="IT.FA.FADTC" OrderNumber="20" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.FA.FADY" OrderNumber="21" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.FA.FATPT" OrderNumber="22" Mandatory="No" MethodOID="MT.DIARYTPT" />
+        <ItemRef ItemOID="IT.FA.FATPTNUM" OrderNumber="23" Mandatory="No" KeySequence="5" MethodOID="MT.DIARYTPT" />
+        <ItemRef ItemOID="IT.FA.FATPTREF" OrderNumber="24" Mandatory="No" />
+        <ItemRef ItemOID="IT.FA.FARFTDTC" OrderNumber="25" Mandatory="No" MethodOID="MT.RFDOSE" />
         <def:Class Name="FINDINGS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.AE" Name="AE" Repeating="Yes" IsReferenceData="No" SASDatasetName="AE" Purpose="Tabulation" def:Structure="One record per adverse event per subject" def:ArchiveLocationID="LF.AE" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.AE" Name="AE" Repeating="Yes" SASDatasetName="AE" Purpose="Tabulation" def:Structure="One record per adverse event per subject" def:ArchiveLocationID="LF.AE" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.AE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.AE.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.AE.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.AE.AESEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" Role="Identifier" />
-        <ItemRef ItemOID="IT.AE.AETERM" OrderNumber="5" Mandatory="Yes" MethodOID="MT.TRIM" Role="Topic" />
-        <ItemRef ItemOID="IT.AE.AEDECOD" OrderNumber="6" Mandatory="Yes" KeySequence="3" MethodOID="MT.AECODE" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.AE.AECAT" OrderNumber="7" Mandatory="No" MethodOID="MT.AECAT" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.AE.AEBODSYS" OrderNumber="8" Mandatory="No" MethodOID="MT.AECODE" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.AE.AESEV" OrderNumber="9" Mandatory="No" MethodOID="MT.UPPER" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.AE.AESER" OrderNumber="10" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.AE.AEACN" OrderNumber="11" Mandatory="No" MethodOID="MT.AEMAP" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.AE.AEREL" OrderNumber="12" Mandatory="No" MethodOID="MT.AEMAP" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.AE.AEOUT" OrderNumber="13" Mandatory="No" MethodOID="MT.AEMAP" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.AE.AESHOSP" OrderNumber="14" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.AE.EPOCH" OrderNumber="15" Mandatory="No" MethodOID="MT.EPOCH" Role="Timing" />
-        <ItemRef ItemOID="IT.AE.AESTDTC" OrderNumber="16" Mandatory="No" KeySequence="4" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.AE.AEENDTC" OrderNumber="17" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.AE.AESTDY" OrderNumber="18" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.AE.AEENDY" OrderNumber="19" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
-        <ItemRef ItemOID="IT.AE.AEENRTPT" OrderNumber="20" Mandatory="No" MethodOID="MT.AEONGO" Role="Timing" />
-        <ItemRef ItemOID="IT.AE.AEENTPT" OrderNumber="21" Mandatory="No" MethodOID="MT.AEONGO" Role="Timing" />
+        <ItemRef ItemOID="IT.AE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.AE.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.AE.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.AE.AESEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" />
+        <ItemRef ItemOID="IT.AE.AETERM" OrderNumber="5" Mandatory="Yes" MethodOID="MT.TRIM" />
+        <ItemRef ItemOID="IT.AE.AELLT" OrderNumber="6" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AELLTCD" OrderNumber="7" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AEDECOD" OrderNumber="8" Mandatory="Yes" KeySequence="3" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AEPTCD" OrderNumber="9" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AEHLT" OrderNumber="10" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AEHLTCD" OrderNumber="11" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AEHLGT" OrderNumber="12" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AEHLGTCD" OrderNumber="13" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AECAT" OrderNumber="14" Mandatory="No" MethodOID="MT.AECAT" />
+        <ItemRef ItemOID="IT.AE.AEBODSYS" OrderNumber="15" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AEBDSYCD" OrderNumber="16" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AESOC" OrderNumber="17" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AESOCCD" OrderNumber="18" Mandatory="No" MethodOID="MT.AECODE" />
+        <ItemRef ItemOID="IT.AE.AESEV" OrderNumber="19" Mandatory="No" MethodOID="MT.UPPER" />
+        <ItemRef ItemOID="IT.AE.AESER" OrderNumber="20" Mandatory="No" />
+        <ItemRef ItemOID="IT.AE.AEACN" OrderNumber="21" Mandatory="No" MethodOID="MT.AEMAP" />
+        <ItemRef ItemOID="IT.AE.AEREL" OrderNumber="22" Mandatory="No" MethodOID="MT.AEMAP" />
+        <ItemRef ItemOID="IT.AE.AEOUT" OrderNumber="23" Mandatory="No" MethodOID="MT.AEMAP" />
+        <ItemRef ItemOID="IT.AE.AESHOSP" OrderNumber="24" Mandatory="No" />
+        <ItemRef ItemOID="IT.AE.EPOCH" OrderNumber="25" Mandatory="No" MethodOID="MT.EPOCH" />
+        <ItemRef ItemOID="IT.AE.AESTDTC" OrderNumber="26" Mandatory="No" KeySequence="4" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.AE.AEENDTC" OrderNumber="27" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.AE.AESTDY" OrderNumber="28" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.AE.AEENDY" OrderNumber="29" Mandatory="No" MethodOID="MT.DY" />
+        <ItemRef ItemOID="IT.AE.AEENRTPT" OrderNumber="30" Mandatory="No" MethodOID="MT.AEONGO" />
+        <ItemRef ItemOID="IT.AE.AEENTPT" OrderNumber="31" Mandatory="No" MethodOID="MT.AEONGO" />
         <def:Class Name="EVENTS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.IS" Name="IS" Repeating="Yes" IsReferenceData="No" SASDatasetName="IS" Purpose="Tabulation" def:Structure="One record per test per specimen per visit per subject" def:ArchiveLocationID="LF.IS" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.IS" Name="IS" Repeating="Yes" SASDatasetName="IS" Purpose="Tabulation" def:Structure="One record per test per specimen per visit per subject" def:ArchiveLocationID="LF.IS" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Immunogenicity Specimen Assessments</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.IS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.IS.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.IS.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" Role="Identifier" />
-        <ItemRef ItemOID="IT.IS.ISSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" Role="Identifier" />
-        <ItemRef ItemOID="IT.IS.ISTESTCD" OrderNumber="5" Mandatory="Yes" KeySequence="3" Role="Topic" />
-        <ItemRef ItemOID="IT.IS.ISTEST" OrderNumber="6" Mandatory="Yes" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISBDAGNT" OrderNumber="7" Mandatory="No" KeySequence="4" MethodOID="MT.STRAIN" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISCAT" OrderNumber="8" Mandatory="No" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISORRES" OrderNumber="9" Mandatory="No" MethodOID="MT.ISRES" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISORRESU" OrderNumber="10" Mandatory="No" MethodOID="MT.ISRES" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISSTRESC" OrderNumber="11" Mandatory="No" MethodOID="MT.ISRES" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISSTRESN" OrderNumber="12" Mandatory="No" MethodOID="MT.ISRES" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISSTRESU" OrderNumber="13" Mandatory="No" MethodOID="MT.ISRES" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISSTAT" OrderNumber="14" Mandatory="No" MethodOID="MT.ISRES" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISREASND" OrderNumber="15" Mandatory="No" MethodOID="MT.ISRES" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISSPEC" OrderNumber="16" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISMETHOD" OrderNumber="17" Mandatory="No" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISLOBXFL" OrderNumber="18" Mandatory="No" MethodOID="MT.LOBXFL" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.IS.ISLLOQ" OrderNumber="19" Mandatory="No" Role="Variable Qualifier" />
-        <ItemRef ItemOID="IT.IS.VISITNUM" OrderNumber="20" Mandatory="No" KeySequence="5" MethodOID="MT.VISIT" Role="Timing" />
-        <ItemRef ItemOID="IT.IS.VISIT" OrderNumber="21" Mandatory="No" MethodOID="MT.VISIT" Role="Timing" />
-        <ItemRef ItemOID="IT.IS.EPOCH" OrderNumber="22" Mandatory="No" MethodOID="MT.EPOCH" Role="Timing" />
-        <ItemRef ItemOID="IT.IS.ISDTC" OrderNumber="23" Mandatory="No" MethodOID="MT.ISODT" Role="Timing" />
-        <ItemRef ItemOID="IT.IS.ISDY" OrderNumber="24" Mandatory="No" MethodOID="MT.DY" Role="Timing" />
+        <ItemRef ItemOID="IT.IS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.IS.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.IS.USUBJID" OrderNumber="3" Mandatory="Yes" KeySequence="2" MethodOID="MT.USUBJID" />
+        <ItemRef ItemOID="IT.IS.ISSEQ" OrderNumber="4" Mandatory="Yes" MethodOID="MT.SEQ" />
+        <ItemRef ItemOID="IT.IS.ISTESTCD" OrderNumber="5" Mandatory="Yes" KeySequence="3" />
+        <ItemRef ItemOID="IT.IS.ISTEST" OrderNumber="6" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.IS.ISBDAGNT" OrderNumber="7" Mandatory="No" KeySequence="4" MethodOID="MT.STRAIN" />
+        <ItemRef ItemOID="IT.IS.ISCAT" OrderNumber="8" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISORRES" OrderNumber="9" Mandatory="No" MethodOID="MT.ISRES" />
+        <ItemRef ItemOID="IT.IS.ISORRESU" OrderNumber="10" Mandatory="No" MethodOID="MT.ISRES" />
+        <ItemRef ItemOID="IT.IS.ISORNRLO" OrderNumber="11" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISORNRHI" OrderNumber="12" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISSTRESC" OrderNumber="13" Mandatory="No" MethodOID="MT.ISRES" />
+        <ItemRef ItemOID="IT.IS.ISSTRESN" OrderNumber="14" Mandatory="No" MethodOID="MT.ISRES" />
+        <ItemRef ItemOID="IT.IS.ISSTRESU" OrderNumber="15" Mandatory="No" MethodOID="MT.ISRES" />
+        <ItemRef ItemOID="IT.IS.ISSTNRLO" OrderNumber="16" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISSTNRHI" OrderNumber="17" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISNRIND" OrderNumber="18" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISSTAT" OrderNumber="19" Mandatory="No" MethodOID="MT.ISRES" />
+        <ItemRef ItemOID="IT.IS.ISREASND" OrderNumber="20" Mandatory="No" MethodOID="MT.ISRES" />
+        <ItemRef ItemOID="IT.IS.ISSPEC" OrderNumber="21" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISMETHOD" OrderNumber="22" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.ISLOBXFL" OrderNumber="23" Mandatory="No" MethodOID="MT.LOBXFL" />
+        <ItemRef ItemOID="IT.IS.ISLLOQ" OrderNumber="24" Mandatory="No" />
+        <ItemRef ItemOID="IT.IS.VISITNUM" OrderNumber="25" Mandatory="No" KeySequence="5" MethodOID="MT.VISIT" />
+        <ItemRef ItemOID="IT.IS.VISIT" OrderNumber="26" Mandatory="No" MethodOID="MT.VISIT" />
+        <ItemRef ItemOID="IT.IS.EPOCH" OrderNumber="27" Mandatory="No" MethodOID="MT.EPOCH" />
+        <ItemRef ItemOID="IT.IS.ISDTC" OrderNumber="28" Mandatory="No" MethodOID="MT.ISODT" />
+        <ItemRef ItemOID="IT.IS.ISDY" OrderNumber="29" Mandatory="No" MethodOID="MT.DY" />
         <def:Class Name="FINDINGS" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.TA" Name="TA" Repeating="Yes" IsReferenceData="Yes" SASDatasetName="TA" Purpose="Tabulation" def:Structure="One record per planned element per arm" def:ArchiveLocationID="LF.TA" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.TA" Name="TA" Repeating="Yes" SASDatasetName="TA" Purpose="Tabulation" def:Structure="One record per planned element per arm" def:ArchiveLocationID="LF.TA" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Trial Arms</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.TA.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.TA.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.TA.ARMCD" OrderNumber="3" Mandatory="Yes" KeySequence="2" Role="Topic" />
-        <ItemRef ItemOID="IT.TA.ARM" OrderNumber="4" Mandatory="Yes" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.TA.TAETORD" OrderNumber="5" Mandatory="Yes" KeySequence="3" Role="Timing" />
-        <ItemRef ItemOID="IT.TA.ETCD" OrderNumber="6" Mandatory="Yes" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.TA.ELEMENT" OrderNumber="7" Mandatory="No" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.TA.TABRANCH" OrderNumber="8" Mandatory="No" Role="Rule" />
-        <ItemRef ItemOID="IT.TA.TATRANS" OrderNumber="9" Mandatory="No" Role="Rule" />
-        <ItemRef ItemOID="IT.TA.EPOCH" OrderNumber="10" Mandatory="Yes" Role="Timing" />
+        <ItemRef ItemOID="IT.TA.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.TA.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TA.ARMCD" OrderNumber="3" Mandatory="Yes" KeySequence="2" />
+        <ItemRef ItemOID="IT.TA.ARM" OrderNumber="4" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TA.TAETORD" OrderNumber="5" Mandatory="Yes" KeySequence="3" />
+        <ItemRef ItemOID="IT.TA.ETCD" OrderNumber="6" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TA.ELEMENT" OrderNumber="7" Mandatory="No" />
+        <ItemRef ItemOID="IT.TA.TABRANCH" OrderNumber="8" Mandatory="No" />
+        <ItemRef ItemOID="IT.TA.TATRANS" OrderNumber="9" Mandatory="No" />
+        <ItemRef ItemOID="IT.TA.EPOCH" OrderNumber="10" Mandatory="Yes" />
         <def:Class Name="TRIAL DESIGN" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.TE" Name="TE" Repeating="Yes" IsReferenceData="Yes" SASDatasetName="TE" Purpose="Tabulation" def:Structure="One record per planned element" def:ArchiveLocationID="LF.TE" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.TE" Name="TE" Repeating="Yes" SASDatasetName="TE" Purpose="Tabulation" def:Structure="One record per planned element" def:ArchiveLocationID="LF.TE" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Trial Elements</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.TE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.TE.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.TE.ETCD" OrderNumber="3" Mandatory="Yes" KeySequence="2" Role="Topic" />
-        <ItemRef ItemOID="IT.TE.ELEMENT" OrderNumber="4" Mandatory="Yes" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.TE.TESTRL" OrderNumber="5" Mandatory="Yes" Role="Rule" />
-        <ItemRef ItemOID="IT.TE.TEENRL" OrderNumber="6" Mandatory="No" Role="Rule" />
-        <ItemRef ItemOID="IT.TE.TEDUR" OrderNumber="7" Mandatory="No" Role="Timing" />
+        <ItemRef ItemOID="IT.TE.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.TE.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TE.ETCD" OrderNumber="3" Mandatory="Yes" KeySequence="2" />
+        <ItemRef ItemOID="IT.TE.ELEMENT" OrderNumber="4" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TE.TESTRL" OrderNumber="5" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TE.TEENRL" OrderNumber="6" Mandatory="No" />
+        <ItemRef ItemOID="IT.TE.TEDUR" OrderNumber="7" Mandatory="No" />
         <def:Class Name="TRIAL DESIGN" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.TV" Name="TV" Repeating="Yes" IsReferenceData="Yes" SASDatasetName="TV" Purpose="Tabulation" def:Structure="One record per planned visit per arm" def:ArchiveLocationID="LF.TV" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.TV" Name="TV" Repeating="Yes" SASDatasetName="TV" Purpose="Tabulation" def:Structure="One record per planned visit per arm" def:ArchiveLocationID="LF.TV" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Trial Visits</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.TV.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.TV.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.TV.VISITNUM" OrderNumber="3" Mandatory="Yes" KeySequence="3" Role="Topic" />
-        <ItemRef ItemOID="IT.TV.VISIT" OrderNumber="4" Mandatory="Yes" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.TV.VISITDY" OrderNumber="5" Mandatory="No" Role="Timing" />
-        <ItemRef ItemOID="IT.TV.ARMCD" OrderNumber="6" Mandatory="No" KeySequence="2" Role="Record Qualifier" />
-        <ItemRef ItemOID="IT.TV.ARM" OrderNumber="7" Mandatory="No" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.TV.TVSTRL" OrderNumber="8" Mandatory="Yes" Role="Rule" />
-        <ItemRef ItemOID="IT.TV.TVENRL" OrderNumber="9" Mandatory="No" Role="Rule" />
+        <ItemRef ItemOID="IT.TV.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.TV.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TV.VISITNUM" OrderNumber="3" Mandatory="Yes" KeySequence="3" />
+        <ItemRef ItemOID="IT.TV.VISIT" OrderNumber="4" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TV.VISITDY" OrderNumber="5" Mandatory="No" />
+        <ItemRef ItemOID="IT.TV.ARMCD" OrderNumber="6" Mandatory="No" KeySequence="2" />
+        <ItemRef ItemOID="IT.TV.ARM" OrderNumber="7" Mandatory="No" />
+        <ItemRef ItemOID="IT.TV.TVSTRL" OrderNumber="8" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TV.TVENRL" OrderNumber="9" Mandatory="No" />
         <def:Class Name="TRIAL DESIGN" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.TI" Name="TI" Repeating="Yes" IsReferenceData="Yes" SASDatasetName="TI" Purpose="Tabulation" def:Structure="One record per I/E criterion" def:ArchiveLocationID="LF.TI" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.TI" Name="TI" Repeating="Yes" SASDatasetName="TI" Purpose="Tabulation" def:Structure="One record per I/E criterion" def:ArchiveLocationID="LF.TI" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Trial Inclusion/Exclusion Criteria</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.TI.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.TI.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.TI.IETESTCD" OrderNumber="3" Mandatory="Yes" KeySequence="2" Role="Topic" />
-        <ItemRef ItemOID="IT.TI.IETEST" OrderNumber="4" Mandatory="Yes" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.TI.IECAT" OrderNumber="5" Mandatory="Yes" Role="Grouping Qualifier" />
-        <ItemRef ItemOID="IT.TI.TIVERS" OrderNumber="6" Mandatory="No" Role="Record Qualifier" />
+        <ItemRef ItemOID="IT.TI.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.TI.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TI.IETESTCD" OrderNumber="3" Mandatory="Yes" KeySequence="2" />
+        <ItemRef ItemOID="IT.TI.IETEST" OrderNumber="4" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TI.IECAT" OrderNumber="5" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TI.TIVERS" OrderNumber="6" Mandatory="No" />
         <def:Class Name="TRIAL DESIGN" />
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.TS" Name="TS" Repeating="Yes" IsReferenceData="Yes" SASDatasetName="TS" Purpose="Tabulation" def:Structure="One record per trial summary parameter value" def:ArchiveLocationID="LF.TS" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
+      <ItemGroupDef OID="IG.TS" Name="TS" Repeating="Yes" SASDatasetName="TS" Purpose="Tabulation" def:Structure="One record per trial summary parameter value" def:ArchiveLocationID="LF.TS" def:CommentOID="COM.TD" def:StandardOID="STD.SDTMIG">
         <Description>
           <TranslatedText xml:lang="en">Trial Summary</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.TS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" Role="Identifier" />
-        <ItemRef ItemOID="IT.TS.DOMAIN" OrderNumber="2" Mandatory="Yes" Role="Identifier" />
-        <ItemRef ItemOID="IT.TS.TSSEQ" OrderNumber="3" Mandatory="Yes" KeySequence="3" Role="Identifier" />
-        <ItemRef ItemOID="IT.TS.TSPARMCD" OrderNumber="4" Mandatory="Yes" KeySequence="2" Role="Topic" />
-        <ItemRef ItemOID="IT.TS.TSPARM" OrderNumber="5" Mandatory="Yes" Role="Synonym Qualifier" />
-        <ItemRef ItemOID="IT.TS.TSVAL" OrderNumber="6" Mandatory="No" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.TS.TSVALNF" OrderNumber="7" Mandatory="No" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.TS.TSVALCD" OrderNumber="8" Mandatory="No" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.TS.TSVCDREF" OrderNumber="9" Mandatory="No" Role="Result Qualifier" />
-        <ItemRef ItemOID="IT.TS.TSVCDVER" OrderNumber="10" Mandatory="No" Role="Result Qualifier" />
+        <ItemRef ItemOID="IT.TS.STUDYID" OrderNumber="1" Mandatory="Yes" KeySequence="1" />
+        <ItemRef ItemOID="IT.TS.DOMAIN" OrderNumber="2" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TS.TSSEQ" OrderNumber="3" Mandatory="Yes" KeySequence="3" />
+        <ItemRef ItemOID="IT.TS.TSPARMCD" OrderNumber="4" Mandatory="Yes" KeySequence="2" />
+        <ItemRef ItemOID="IT.TS.TSPARM" OrderNumber="5" Mandatory="Yes" />
+        <ItemRef ItemOID="IT.TS.TSVAL" OrderNumber="6" Mandatory="No" />
+        <ItemRef ItemOID="IT.TS.TSVALNF" OrderNumber="7" Mandatory="No" />
+        <ItemRef ItemOID="IT.TS.TSVALCD" OrderNumber="8" Mandatory="No" />
+        <ItemRef ItemOID="IT.TS.TSVCDREF" OrderNumber="9" Mandatory="No" />
+        <ItemRef ItemOID="IT.TS.TSVCDVER" OrderNumber="10" Mandatory="No" />
         <def:Class Name="TRIAL DESIGN" />
       </ItemGroupDef>
       <ItemDef OID="IT.DM.STUDYID" Name="STUDYID" SASFieldName="STUDYID" DataType="text" Length="7">
@@ -502,6 +522,19 @@
           <TranslatedText xml:lang="en">Date/Time of End of Participation</TranslatedText>
         </Description>
         <def:Origin Type="Derived" />
+      </ItemDef>
+      <ItemDef OID="IT.DM.DTHDTC" Name="DTHDTC" SASFieldName="DTHDTC" DataType="date" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Death</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.DM.DTHFL" Name="DTHFL" SASFieldName="DTHFL" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Subject Death Flag</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY" />
+        <def:Origin Type="Assigned" />
       </ItemDef>
       <ItemDef OID="IT.DM.SITEID" Name="SITEID" SASFieldName="SITEID" DataType="text" Length="3">
         <Description>
@@ -579,6 +612,12 @@
         </Description>
         <CodeListRef CodeListOID="CL.ARMNULRS" />
         <def:Origin Type="Derived" />
+      </ItemDef>
+      <ItemDef OID="IT.DM.ACTARMUD" Name="ACTARMUD" SASFieldName="ACTARMUD" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Description of Unplanned Actual Arm</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
       </ItemDef>
       <ItemDef OID="IT.DM.COUNTRY" Name="COUNTRY" SASFieldName="COUNTRY" DataType="text" Length="3">
         <Description>
@@ -1340,6 +1379,18 @@
         <CodeListRef CodeListOID="CL.EVAL" />
         <def:Origin Type="Assigned" />
       </ItemDef>
+      <ItemDef OID="IT.FA.VISITNUM" Name="VISITNUM" SASFieldName="VISITNUM" DataType="float" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" />
+      </ItemDef>
+      <ItemDef OID="IT.FA.VISIT" Name="VISIT" SASFieldName="VISIT" DataType="text" Length="5">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" />
+      </ItemDef>
       <ItemDef OID="IT.FA.EPOCH" Name="EPOCH" SASFieldName="EPOCH" DataType="text" Length="9">
         <Description>
           <TranslatedText xml:lang="en">Epoch</TranslatedText>
@@ -1413,11 +1464,53 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator" />
       </ItemDef>
+      <ItemDef OID="IT.AE.AELLT" Name="AELLT" SASFieldName="AELLT" DataType="text" Length="1" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">Lowest Level Term</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AELLTCD" Name="AELLTCD" SASFieldName="AELLTCD" DataType="integer" Length="8" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">Lowest Level Term Code</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
       <ItemDef OID="IT.AE.AEDECOD" Name="AEDECOD" SASFieldName="AEDECOD" DataType="text" Length="33" def:CommentOID="COM.CODING">
         <Description>
           <TranslatedText xml:lang="en">Dictionary-Derived Term</TranslatedText>
         </Description>
         <def:Origin Type="Derived" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEPTCD" Name="AEPTCD" SASFieldName="AEPTCD" DataType="integer" Length="8" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">Preferred Term Code</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLT" Name="AEHLT" SASFieldName="AEHLT" DataType="text" Length="1" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Term</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLTCD" Name="AEHLTCD" SASFieldName="AEHLTCD" DataType="integer" Length="8" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Term Code</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLGT" Name="AEHLGT" SASFieldName="AEHLGT" DataType="text" Length="1" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Group Term</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLGTCD" Name="AEHLGTCD" SASFieldName="AEHLGTCD" DataType="integer" Length="8" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Group Term Code</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
       </ItemDef>
       <ItemDef OID="IT.AE.AECAT" Name="AECAT" SASFieldName="AECAT" DataType="text" Length="11">
         <Description>
@@ -1430,6 +1523,24 @@
           <TranslatedText xml:lang="en">Body System or Organ Class</TranslatedText>
         </Description>
         <def:Origin Type="Derived" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEBDSYCD" Name="AEBDSYCD" SASFieldName="AEBDSYCD" DataType="integer" Length="8" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">Body System or Organ Class Code</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESOC" Name="AESOC" SASFieldName="AESOC" DataType="text" Length="47" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">Primary System Organ Class</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESOCCD" Name="AESOCCD" SASFieldName="AESOCCD" DataType="integer" Length="8" def:CommentOID="COM.CODING">
+        <Description>
+          <TranslatedText xml:lang="en">Primary System Organ Class Code</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
       </ItemDef>
       <ItemDef OID="IT.AE.AESEV" Name="AESEV" SASFieldName="AESEV" DataType="text" Length="8">
         <Description>
@@ -1579,6 +1690,18 @@
         <CodeListRef CodeListOID="CL.UNIT" />
         <def:Origin Type="Collected" Source="Investigator" />
       </ItemDef>
+      <ItemDef OID="IT.IS.ISORNRLO" Name="ISORNRLO" SASFieldName="ISORNRLO" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Lower Limit-Orig Unit</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.IS.ISORNRHI" Name="ISORNRHI" SASFieldName="ISORNRHI" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Upper Limit-Orig Unit</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
       <ItemDef OID="IT.IS.ISSTRESC" Name="ISSTRESC" SASFieldName="ISSTRESC" DataType="text" Length="4">
         <Description>
           <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
@@ -1597,6 +1720,24 @@
         </Description>
         <CodeListRef CodeListOID="CL.UNIT" />
         <def:Origin Type="Derived" />
+      </ItemDef>
+      <ItemDef OID="IT.IS.ISSTNRLO" Name="ISSTNRLO" SASFieldName="ISSTNRLO" DataType="float" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Lower Limit-Std Unit</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.IS.ISSTNRHI" Name="ISSTNRHI" SASFieldName="ISSTNRHI" DataType="float" Length="8">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Upper Limit-Std Unit</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
+      </ItemDef>
+      <ItemDef OID="IT.IS.ISNRIND" Name="ISNRIND" SASFieldName="ISNRIND" DataType="text" Length="1">
+        <Description>
+          <TranslatedText xml:lang="en">Reference Range Indicator</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" />
       </ItemDef>
       <ItemDef OID="IT.IS.ISSTAT" Name="ISSTAT" SASFieldName="ISSTAT" DataType="text" Length="8">
         <Description>
@@ -2553,7 +2694,7 @@
       </MethodDef>
       <MethodDef OID="MT.AECODE" Name="MT.AECODE" Type="Other">
         <Description>
-          <TranslatedText xml:lang="en">Verbatim (case-insensitive) -&gt; preferred term and system organ class from a local coding table (13 preferred terms, 21 verbatim variants). See COM.CODING.</TranslatedText>
+          <TranslatedText xml:lang="en">AEDECOD and AEBODSYS from the coding table of the synthetic extract, upper case (COM.CODING). AESOC = AEBODSYS. AELLT, AEPTCD, AEHLT, AEHLGT and their codes, AEBDSYCD, AESOCCD are null (no dictionary).</TranslatedText>
         </Description>
       </MethodDef>
       <MethodDef OID="MT.AECAT" Name="MT.AECAT" Type="Computation">
@@ -2584,6 +2725,11 @@
       <MethodDef OID="MT.SEQDS" Name="MT.SEQDS" Type="Computation">
         <Description>
           <TranslatedText xml:lang="en">Sequence number within USUBJID, ordered by DSSTDTC; on the same date: informed consent, randomization, disposition event.</TranslatedText>
+        </Description>
+      </MethodDef>
+      <MethodDef OID="MT.FAVISIT" Name="MT.FAVISIT" Type="Computation">
+        <Description>
+          <TranslatedText xml:lang="en">Observation at 30 minutes and diary day 1: VISITNUM 2, VISIT DAY 1 (vaccination visit). Diary days 2 to 7: VISITNUM 3, VISIT DAY 8 (diary card reviewed at the Day 8 visit).</TranslatedText>
         </Description>
       </MethodDef>
       <def:CommentDef OID="COM.RACE">

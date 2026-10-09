@@ -14,9 +14,11 @@ quit;
 
 data is1;
   length studyid domain istestcd istest isbdagnt iscat isorres isorresu isstresc
-    isstresu isstat isreasnd isspec ismethod isdtc epoch $200;
+    isstresu isstat isreasnd isspec ismethod isdtc epoch isornrlo isornrhi isnrind $200;
   set is0(rename=(result=_res visit=_visit));
   _row = _n_;
+  isstnrlo = .;
+  isstnrhi = .;
 
   studyid = 'VAXF101';
   domain = 'IS';
@@ -72,9 +74,14 @@ data is2;
     iscat    = 'Category for Immunogenicity Test'
     isorres  = 'Results or Findings in Original Units'
     isorresu = 'Original Units'
+    isornrlo = 'Reference Range Lower Limit-Orig Unit'
+    isornrhi = 'Reference Range Upper Limit-Orig Unit'
     isstresc = 'Character Result/Finding in Std Format'
     isstresn = 'Numeric Results/Findings in Std. Units'
     isstresu = 'Standard Units'
+    isstnrlo = 'Reference Range Lower Limit-Std Unit'
+    isstnrhi = 'Reference Range Upper Limit-Std Unit'
+    isnrind  = 'Reference Range Indicator'
     isstat   = 'Completion Status'
     isreasnd = 'Reason Not Done'
     isspec   = 'Specimen Type'
@@ -90,6 +97,7 @@ run;
 
 %finalize(is2, is, Immunogenicity Specimen Assessments,
   vars=STUDYID DOMAIN USUBJID ISSEQ ISTESTCD ISTEST ISBDAGNT ISCAT ISORRES ISORRESU
-    ISSTRESC ISSTRESN ISSTRESU ISSTAT ISREASND ISSPEC ISMETHOD ISLOBXFL ISLLOQ
+    ISORNRLO ISORNRHI ISSTRESC ISSTRESN ISSTRESU ISSTNRLO ISSTNRHI ISNRIND ISSTAT
+    ISREASND ISSPEC ISMETHOD ISLOBXFL ISLLOQ
     VISITNUM VISIT EPOCH ISDTC ISDY,
   keys=STUDYID USUBJID ISTESTCD ISBDAGNT VISITNUM)

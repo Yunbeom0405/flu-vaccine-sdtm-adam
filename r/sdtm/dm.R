@@ -55,6 +55,9 @@ dm <- read_raw("DM") |>
     ARMNRS = case_when(
       is.na(TRTCODE) ~ "SCREEN FAILURE",
       is.na(RFXSTDTC) ~ "ASSIGNED, NOT TREATED"),
+    ACTARMUD = NA_character_,
+    DTHDTC = NA_character_,
+    DTHFL = NA_character_,
     COUNTRY = "USA",
     DMDTC = RFICDTC,
     DMDY = study_day(DMDTC, RFSTDTC))

@@ -70,7 +70,7 @@ quit;
 
 data fa2;
   length studyid domain fagrpid fatest facat faeval fastresc fastresu fatptref
-    farftdtc epoch fadtc $200;
+    farftdtc visit epoch fadtc $200;
   set fa1;
   by usubjid;
 
@@ -88,6 +88,15 @@ data fa2;
     fastresu = faorresu;
   end;
   fatptref = 'VACCINATION';
+  /* time point 0 and diary day 1 belong to the Day 1 visit, diary days 2-7 to the Day 8 review */
+  if fatptnum <= 1 then do;
+    visitnum = 2;
+    visit = 'DAY 1';
+  end;
+  else do;
+    visitnum = 3;
+    visit = 'DAY 8';
+  end;
   farftdtc = rfxstdtc;
 
   %iso(fadat, fadtc)
@@ -110,6 +119,8 @@ data fa2;
     fastresn = 'Numeric Result/Finding in Standard Units'
     fastresu = 'Standard Units'
     faeval   = 'Evaluator'
+    visitnum = 'Visit Number'
+    visit    = 'Visit Name'
     epoch    = 'Epoch'
     fadtc    = 'Date/Time of Collection'
     fady     = 'Study Day of Collection'
@@ -121,6 +132,6 @@ run;
 
 %finalize(fa2, face, Findings About Events or Interventions,
   vars=STUDYID DOMAIN USUBJID FASEQ FAGRPID FATESTCD FATEST FAOBJ FACAT FASCAT
-    FAORRES FAORRESU FASTRESC FASTRESN FASTRESU FAEVAL EPOCH FADTC FADY FATPT
+    FAORRES FAORRESU FASTRESC FASTRESN FASTRESU FAEVAL VISITNUM VISIT EPOCH FADTC FADY FATPT
     FATPTNUM FATPTREF FARFTDTC,
   keys=STUDYID USUBJID FAOBJ FATESTCD FATPTNUM)

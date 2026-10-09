@@ -18,7 +18,8 @@ quit;
 data dm1;
   set dm0;
   length studyid domain usubjid subjid rfstdtc rfendtc rfxstdtc rfxendtc rficdtc
-    rfpendtc siteid brthdtc ageu armcd arm actarmcd actarm armnrs country dmdtc $200;
+    rfpendtc dthdtc dthfl siteid brthdtc ageu armcd arm actarmcd actarm armnrs actarmud
+    country dmdtc $200;
 
   studyid = 'VAXF101';
   domain = 'DM';
@@ -77,6 +78,9 @@ data dm1;
     actarmcd = 'Actual Arm Code'
     actarm   = 'Description of Actual Arm'
     armnrs   = 'Reason Arm and/or Actual Arm is Null'
+    actarmud = 'Description of Unplanned Actual Arm'
+    dthdtc   = 'Date/Time of Death'
+    dthfl    = 'Subject Death Flag'
     country  = 'Country'
     dmdtc    = 'Date/Time of Collection'
     dmdy     = 'Study Day of Collection';
@@ -84,6 +88,6 @@ run;
 
 %finalize(dm1, dm, Demographics,
   vars=STUDYID DOMAIN USUBJID SUBJID RFSTDTC RFENDTC RFXSTDTC RFXENDTC RFICDTC
-    RFPENDTC SITEID BRTHDTC AGE AGEU SEX RACE ETHNIC ARMCD ARM ACTARMCD ACTARM
-    ARMNRS COUNTRY DMDTC DMDY,
+    RFPENDTC DTHDTC DTHFL SITEID BRTHDTC AGE AGEU SEX RACE ETHNIC ARMCD ARM ACTARMCD
+    ACTARM ARMNRS ACTARMUD COUNTRY DMDTC DMDY,
   keys=STUDYID USUBJID)

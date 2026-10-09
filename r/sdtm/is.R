@@ -15,6 +15,8 @@ is_ <- read_raw("LB_HAI") |>
     ISCAT = "IMMUNOGENICITY",
     ISSPEC = "SERUM",
     ISMETHOD = "HEMAGGLUTINATION INHIBITION ASSAY",
+    ISORNRLO = NA_character_, ISORNRHI = NA_character_, ISNRIND = NA_character_,
+    ISSTNRLO = NA_real_, ISSTNRHI = NA_real_,
     ISLLOQ = 10,
     VISITNUM = visit_num(VISIT),
     VISIT = toupper(VISIT),

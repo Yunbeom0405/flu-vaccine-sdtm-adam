@@ -61,8 +61,8 @@ proc sql;
 quit;
 
 data ae1;
-  length studyid domain aedecod aebodsys aecat aeacn aeout aeenrtpt aeentpt epoch
-    aestdtc aeendtc $200;
+  length studyid domain aellt aedecod aehlt aehlgt aebodsys aesoc aecat aeacn aeout aeenrtpt
+    aeentpt epoch aestdtc aeendtc $200;
   set ae0(rename=(aeterm=_term aeacn=_acn aeout=_out));
 
   studyid = 'VAXF101';
@@ -71,6 +71,13 @@ data ae1;
   aedecod = put(upcase(aeterm), $aept.);
   aebodsys = put(aedecod, $aesoc.);
   if aebodsys = aedecod then put 'WARN' "ING: uncoded AE term " subject= aeterm=;
+  aesoc = aebodsys;
+  aelltcd = .;
+  aeptcd = .;
+  aehltcd = .;
+  aehlgtcd = .;
+  aebdsycd = .;
+  aesoccd = .;
   aecat = 'UNSOLICITED';
 
   aesev = upcase(aesev);
@@ -94,6 +101,16 @@ data ae1;
     aeterm   = 'Reported Term for the Adverse Event'
     aedecod  = 'Dictionary-Derived Term'
     aebodsys = 'Body System or Organ Class'
+    aellt    = 'Lowest Level Term'
+    aelltcd  = 'Lowest Level Term Code'
+    aeptcd   = 'Preferred Term Code'
+    aehlt    = 'High Level Term'
+    aehltcd  = 'High Level Term Code'
+    aehlgt   = 'High Level Group Term'
+    aehlgtcd = 'High Level Group Term Code'
+    aebdsycd = 'Body System or Organ Class Code'
+    aesoc    = 'Primary System Organ Class'
+    aesoccd  = 'Primary System Organ Class Code'
     aecat    = 'Category for Adverse Event'
     aesev    = 'Severity/Intensity'
     aeser    = 'Serious Event'
@@ -124,6 +141,7 @@ data ae1;
 run;
 
 %finalize(ae1, ae, Adverse Events,
-  vars=STUDYID DOMAIN USUBJID AESEQ AETERM AEDECOD AECAT AEBODSYS AESEV AESER
+  vars=STUDYID DOMAIN USUBJID AESEQ AETERM AELLT AELLTCD AEDECOD AEPTCD AEHLT
+    AEHLTCD AEHLGT AEHLGTCD AECAT AEBODSYS AEBDSYCD AESOC AESOCCD AESEV AESER
     AEACN AEREL AEOUT AESHOSP EPOCH AESTDTC AEENDTC AESTDY AEENDY AEENRTPT AEENTPT,
   keys=STUDYID USUBJID AEDECOD AESTDTC AESEQ)

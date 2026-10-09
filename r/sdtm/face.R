@@ -43,7 +43,10 @@ fa <- bind_rows(sev_rows, mm_rows) |>
     FASTRESN = if_else(FATESTCD == "DIAMETER", suppressWarnings(as.numeric(FAORRES)), NA_real_),
     FASTRESU = FAORRESU,
     FAEVAL = "STUDY SUBJECT",
-    FATPTREF = "VACCINATION") |>
+    FATPTREF = "VACCINATION",
+    # time point 0 and diary day 1 belong to the Day 1 visit, diary days 2-7 to the Day 8 review
+    VISITNUM = if_else(FATPTNUM <= 1, 2, 3),
+    VISIT = if_else(FATPTNUM <= 1, "DAY 1", "DAY 8")) |>
   left_join(dm_ref(), by = "USUBJID") |>
   mutate(
     FARFTDTC = RFXSTDTC,

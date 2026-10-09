@@ -34,7 +34,7 @@ ADaM notes:
 | SDTM SAS vs R | 15 datasets, all match |
 | ADaM SAS vs R | 5 datasets, all match |
 | TLF SAS vs R | 4 tables, all match |
-| Pinnacle 21 SDTM (with define.xml) | 0 errors, 0 rejects, 59 warning types |
+| Pinnacle 21 SDTM (with define.xml) | 0 errors, 0 rejects, 46 warning types |
 | Pinnacle 21 ADaM (with define.xml) | 0 errors, 1 warning type (ADAE) + not-validated notes for SDTM-only datasets |
 
 - QC findings: [docs/QC-LOG.md](docs/QC-LOG.md)
@@ -66,7 +66,8 @@ Community edition, engine FDA 2508.1, SDTM-IG 3.4 and ADaM-IG 1.3. MedDRA and SN
 | SD2239 | FA | FATPT differs between the 30-minute check and diary day 1, by design |
 | SD1445 | IS | 464 records with multiple ISLOBXFL for the same test |
 | SD1204 | AE | AEENDTC after RFPENDTC (post-study recovery date, kept as collected) |
-| SD0057, SD1076, SD1078 | various | Expected variables not collected (MedDRA hierarchy, ISNRIND, ACTARMUD); optional variables added or empty |
+| SD1149 | AE, DM, IS | Expected variables kept empty on purpose (MedDRA hierarchy and codes, death date and flag, reference ranges) |
+| SD1076, SD1078 | CE, FA, TS, TV | Optional variables added or empty |
 | SD1311-SD2287 | TS | Optional or sponsor-specific trial summary parameters not populated |
 | SD1107, SD1111, SD1321 | Global | No LB, SE or SUPPAE in scope |
 | AD0047 | ADAE | 10 MedDRA hierarchy variables not available |
